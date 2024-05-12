@@ -8,10 +8,11 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
-
+import org.springframework.web.bind.annotation.CrossOrigin;
 import com.altern.altenshopback.model.Product;
 import com.altern.altenshopback.service.ProductService;
 
+@CrossOrigin(origins="*")
 @RestController
 public class ProcuctContoller {
 
@@ -23,25 +24,25 @@ public class ProcuctContoller {
         return this.productService.getProducts();
     }
 
-    @RequestMapping(method= RequestMethod.GET, value="/product/{id}")
+    @RequestMapping(method= RequestMethod.GET, value="/products/{id}")
     public Product geProduct(@PathVariable int id){        
         return this.productService.getProduct( id);
     }
 
-    @RequestMapping(method = RequestMethod.DELETE, value="/product/{id}")
+    @RequestMapping(method = RequestMethod.DELETE, value="/products/{id}")
     public void deleteProduct(@PathVariable int id){
         this.productService.deleteProduct(id);
     }
 
     @RequestMapping(method = RequestMethod.POST, value = "/products")
-    public void addProduct(@RequestBody Product product){
+    public Product addProduct(@RequestBody Product product){
         System.out.println("CREATE PRODUCT");
-        this.productService.addProduct(product);
+        return this.productService.addProduct(product);
     }
 
-    @RequestMapping(method = RequestMethod.PUT, value = "/product")
-    public void updateProduct(@RequestBody Product product){
-        this.productService.updateProduct(product);
+    @RequestMapping(method = RequestMethod.PUT, value = "/products")
+    public Product updateProduct(@RequestBody Product product){
+        return this.productService.updateProduct(product);
     }
 
 }

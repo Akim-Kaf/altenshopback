@@ -22,16 +22,16 @@ public class ProductService {
         return products;        
     }
 
-    public void addProduct(Product product){
-        this.productRepository.save(product);
+    public Product addProduct(Product product){
+        return this.productRepository.save(product);
     }
 
     public Product getProduct(int id){
         return this.productRepository.findById(id).orElse(null);
     }
 
-    public void updateProduct(Product product){
-        this.productRepository.save(product);
+    public Product updateProduct(Product product){
+        return this.productRepository.save(product);
     }
 
     public void deleteProduct(int id){
