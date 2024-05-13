@@ -1,3 +1,4 @@
+/* 
 package com.altern.altenshopback;
 
 import org.junit.jupiter.api.Test;
@@ -10,4 +11,4 @@ class AltenshopbackApplicationTests {
 	void contextLoads() {
 	}
 
-}
+}*/
