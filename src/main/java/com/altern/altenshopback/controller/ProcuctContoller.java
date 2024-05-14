@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import com.altern.altenshopback.model.Product;
+import com.altern.altenshopback.model.ProductsData;
 import com.altern.altenshopback.service.ProductService;
 
 @CrossOrigin(origins="*")
@@ -43,6 +44,12 @@ public class ProcuctContoller {
     @RequestMapping(method = RequestMethod.PUT, value = "/products")
     public Product updateProduct(@RequestBody Product product){
         return this.productService.updateProduct(product);
+    }
+
+    @RequestMapping(method=RequestMethod.POST, value="/products/array")
+    public void addProducts(@RequestBody ProductsData products){
+        System.out.println("Add Array of products");
+        this.productService.addProducts(products.getData());
     }
 
 }

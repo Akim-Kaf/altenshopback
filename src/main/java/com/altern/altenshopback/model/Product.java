@@ -38,6 +38,21 @@ public class Product {
 
     public Product(){}
 
+    public Product(int id,String code, String name, int price,int quantity, String description,
+        String invetoryStatus,String category, String image, int rating ){
+            this.id=id;
+            this.code=code;
+            this.name=name;
+            this.description=description;
+            this.price=price;
+            this.quantity=quantity;
+            this.inventoryStatus=invetoryStatus;
+            this.category=category;
+            this.image=image;
+            this.rating=rating;
+                
+    }
+
     public int getId(){
         return this.id;
     }

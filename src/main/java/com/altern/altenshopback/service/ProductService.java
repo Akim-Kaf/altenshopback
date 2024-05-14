@@ -38,6 +38,12 @@ public class ProductService {
         this.productRepository.deleteById(id);
     }
 
+    public void addProducts(Product [] products){
+        List<Product>listProducts=new ArrayList<>();
+        listProducts=Arrays.asList(products);
+        this.productRepository.saveAll(listProducts);
+    }
+
 
 
 

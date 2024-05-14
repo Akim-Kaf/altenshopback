@@ -1,9 +1,9 @@
 spring.application.name=altenshopback
 spring.jpa.hibernate.ddl-auto=update
 #docker dadabase url
-spring.datasource.url=jdbc:mysql://mysqldbl:3306/altenshop
+#spring.datasource.url=jdbc:mysql://mysqldbl:3306/altenshop
 #localhost database url 
-#spring.datasource.url=jdbc:mysql://localhost:3306/altenshop
+spring.datasource.url=jdbc:mysql://localhost:3306/altenshop
 spring.datasource.username=victoire
 spring.datasource.password=victoire
 spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
