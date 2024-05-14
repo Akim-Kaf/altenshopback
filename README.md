@@ -8,4 +8,5 @@ La documentation de l'api c'est trouve dans le dossier doc du projet.
 
 - Le projet contient un fichier docker-compose pour mettre en place deux services, l'un pour spring boot et l'autre pour mysql
 - L'instalation du projet avec docker s'effectue avec la commande docker compose up depuis le dossier racine du projet
+- Le projet utilise une base de données nommée altenshop qui est unitialisée avec 30 produits à partir du fichier data.sql dans le dossier resource
 
