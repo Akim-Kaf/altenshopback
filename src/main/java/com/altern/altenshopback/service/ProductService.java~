@@ -43,12 +43,6 @@ public class ProductService {
         listProducts=Arrays.asList(products);
         this.productRepository.saveAll(listProducts);
     }
-    
-    public void deleteProducts(Product [] products){        
-    	List<Product>listProducts=new ArrayList<>();
-        listProducts=Arrays.asList(products);
-        this.productRepository.deleteAll(listProducts);
-    }
 
 
 
